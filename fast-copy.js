@@ -14,6 +14,7 @@ const main = async () => {
         array.push(fsPromises.copyFile(src + file, dest + file))
       }
       const result = await Promise.allSettled(array)
+      console.log(result)
     } catch (e) {
       console.log(e.message)
     }
