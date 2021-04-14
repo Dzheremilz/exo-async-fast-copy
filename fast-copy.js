@@ -13,7 +13,7 @@ const main = async () => {
         // if file copy, if directory create one, call the fct to copy files again ? recursively
         array.push(fsPromises.copyFile(src + file, dest + file))
       }
-      const result = await Promise.race(array)
+      const result = await Promise.allSettled(array)
     } catch (e) {
       console.log(e.message)
     }
