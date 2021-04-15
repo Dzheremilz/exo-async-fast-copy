@@ -9,7 +9,7 @@ const main = async () => {
     const files = await fsPromises.readdir(src)
     try {
       // for of async ? for await of sync
-      for (const file of files) {
+      for await (const file of files) {
         // if file copy, if directory create one, call the fct to copy files again ? recursively
         array.push(fsPromises.copyFile(src + file, dest + file))
       }
