@@ -16,7 +16,7 @@ const main = async () => {
       const result = await Promise.allSettled(array)
       console.log(result)
     } catch (e) {
-      console.log(e.message)
+      console.error(e.message)
     }
   } catch (e) {
     console.error(e.message)

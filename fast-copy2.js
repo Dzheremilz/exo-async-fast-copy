@@ -17,7 +17,7 @@ const main = async () => {
         }
       }
     } catch (e) {
-      console.log(e.message)
+      console.error(e.message)
     }
   } catch (e) {
     console.error(e.message)
